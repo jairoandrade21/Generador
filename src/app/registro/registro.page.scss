@@ -1,0 +1,44 @@
+.titulo{
+    text-align: center;
+    text-decoration: solid;
+}
+
+.custom-item {
+    --background:#ff00005f;
+    border-radius: 30px; 
+    margin-bottom: 8px;
+    padding-top: -2px;
+    padding-bottom: -2px; 
+    position: relative;
+    top: 150px;
+    
+  }
+
+.custom-item ion-input {
+    color:rgb(255, 255, 255); 
+}
+.custom-item ion-icon {
+    color: rgb(255, 255, 255);
+  }
+
+.yati{
+    text-align: center;
+    position: relative;
+    top: 190px;
+}
+
+.error-message{
+    color:rgb(255, 255, 255);
+    top: 10px;
+}
+
+.div{
+    background-color: #f4f2f2;
+}
+
+ion-content {
+    --background: transparent;
+    background-image: url('../../assets/music.webp'); 
+    background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  }

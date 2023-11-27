@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true" class="background">
+  <div class="princi">
+    <ion-title class="titulo">
+      Crear Usuario
+    </ion-title>
+
+  
+    <form [formGroup]="regForm" (ngSubmit)="register()">
+      <ion-item class="custom-item" [class.invalid]="regForm.get('email').invalid && (regForm.get('email').dirty || regForm.get('email').touched)">
+        <ion-input class="ingre2" placeholder="Ingresar Correo" formControlName="email"></ion-input>
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+      </ion-item>
+      <div *ngIf="regForm.get('email').hasError('required') && (regForm.get('email').dirty || regForm.get('email').touched)" class="error-message">
+        Correo es requerido.
+      </div>
+      <div *ngIf="regForm.get('email').hasError('email') && (regForm.get('email').dirty || regForm.get('email').touched)" class="error-message">
+        Correo no es válido.
+      </div>
+
+      <ion-item class="custom-item" [class.invalid]="regForm.get('password').invalid && (regForm.get('password').dirty || regForm.get('password').touched)">
+        <ion-input class="ingre3" placeholder="Ingrese Contraseña" type="password" formControlName="password"></ion-input>
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      </ion-item>
+      <div *ngIf="regForm.get('password').hasError('required') && (regForm.get('password').dirty || regForm.get('password').touched)" class="error-message">
+        Contraseña es requerida.
+      </div>
+      <div *ngIf="regForm.get('password').hasError('minlength') && (regForm.get('password').dirty || regForm.get('password').touched)" class="error-message">
+        Contraseña debe tener al menos 6 caracteres, una mayúscula y un caracter especial.
+      </div>
+
+      <ion-item class="custom-item" [class.invalid]="regForm.get('confirmPassword').invalid && (regForm.get('confirmPassword').dirty || regForm.get('confirmPassword').touched)">
+        <ion-input class="ingre3" placeholder="Reingrese Contraseña" type="password" formControlName="confirmPassword"></ion-input>
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      </ion-item>
+      <div *ngIf="regForm.get('confirmPassword').hasError('required') && (regForm.get('confirmPassword').dirty || regForm.get('confirmPassword').touched)" class="error-message">
+        Confirmar Contraseña es requerida.
+      </div>
+      <div *ngIf="regForm.get('confirmPassword').hasError('passwordMismatch') && (regForm.get('confirmPassword').dirty || regForm.get('confirmPassword').touched)" class="error-message">
+        Las contraseñas no coinciden.
+      </div>
+
+      <div class="yati">
+        <p> ¿Ya tienes cuenta? <a [routerLink]="['/login']">Inicia Sesión</a></p>
+      </div>
+
+      <ion-fab horizontal="end" style="position: absolute; bottom: 20px; right: 30px;">
+        <ion-fab-button (click)="register()">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,71 @@
+ion-content.background-content {
+    --background: transparent;
+    background-image: url('../../assets/icon/istockphoto-1370884809-612x612.jpg'); 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .overlay-container {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    width: 60%;
+    height: 20%;
+    background-image: url('../../assets/icon/logo.png');  
+    background-size: cover;                   
+    background-repeat: no-repeat;
+    opacity: 0.5;  
+    z-index: 1;
+  }
+
+.subti{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 80px;
+    left: 50px;
+    font-size: 25px;
+    }
+
+
+.input{
+    font-size: 300;
+}
+
+.custom-item {
+    background: linear-gradient(45deg, #169970c4, rgb(255, 0, 0));
+    border-radius: 20px; 
+    margin-bottom: 8px;
+    position: relative;
+    top: 200px;
+    transition: background 0.3s;  
+  }
+
+.custom-item:hover {
+    background: linear-gradient(45deg, rgb(255, 255, 255), #ff00c3b5);
+  }
+
+.custom-item ion-input {
+    color:rgb(255, 255, 255); 
+}
+.custom-item ion-icon {
+    color: rgb(255, 255, 255);
+  }
+
+.reset{
+    text-align: center;
+}
+
+.reg{
+    text-align: center;
+}
+
+
+  .yati{
+    position: relative;
+    top: 220px;
+    text-decoration: adjust-color($color:red);
+  }
+  

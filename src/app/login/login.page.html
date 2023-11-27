@@ -1,0 +1,39 @@
+<ion-content class="background-content">
+  <div class="princii">
+    <ion-title class="titulo2">
+      
+    </ion-title>
+
+    <div class="overlay-container">
+      <p class="subti">Spot Music</p>
+    </div>
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <ion-item class="custom-item">
+        <ion-input class="ingre2" placeholder="Ingresar Correo" formControlName="email"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-input class="ingre3" placeholder="Ingrese Contraseña" type="password" formControlName="password"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+    </form>
+  </div>
+
+  <div class="yati">
+    <p> ¿Aún no tienes cuenta? <a [routerLink]="['/registro']">Regístrate Ahora</a></p>
+  </div>
+
+  <div class="yati">
+    <p> ¿Olvidaste la Contraseña? <a [routerLink]="['/reset-password']">Restablecer Contraseña</a></p>
+  </div>
+
+  <ion-fab horizontal="end" style="position: absolute; top: 515px; right: 10px;" class="boton">
+    <ion-fab-button [routerLink]="['/home']">
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

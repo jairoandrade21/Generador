@@ -1,0 +1,21 @@
+ion-content.background-content {
+  --background: transparent;
+  background-image: url('../../assets/icon/fondo.jpg'); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  width: 60%;
+  height: 20%;
+  background-image: url('../../assets/icon/roboto.png');  
+  background-size: cover;                   
+  background-repeat: no-repeat;
+  opacity: 0.5;  
+  z-index: 1;
+}

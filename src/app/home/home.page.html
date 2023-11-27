@@ -1,0 +1,11 @@
+<ion-content class="background-content">
+  
+  <div class="overlay-container">
+
+    <h1 class="h1">{{ welcomeMessage }}</h1>
+
+    <button [routerLink]="['/generador']">Generar Letra con IA</button>
+    <button (click)="guardarLetraGenerada()">Guardar Letra Generada</button>
+    <button (click)="logout()">Cerrar Sesión</button>
+  </div>
+</ion-content>

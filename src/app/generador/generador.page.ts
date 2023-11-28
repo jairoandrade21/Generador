@@ -36,14 +36,11 @@ export class GeneradorPage {
   }
 
   guardarLetraGenerada() {
-    // Obtener la última letra generada
     const ultimaLetra = this.mensajes[this.mensajes.length - 1];
-    // Guardar la letra usando el servicio de almacenamiento
     this.almacenamientoService.guardarLetra(ultimaLetra);
   }
 
   obtenerLetrasGuardadas(): string[] {
-    // Obtener letras guardadas usando el servicio de almacenamiento
     return this.almacenamientoService.obtenerLetrasGuardadas();
   }
 }

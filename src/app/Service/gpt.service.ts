@@ -27,7 +27,6 @@ export class GptService {
     return axios.post(apiUrl, data, { headers })
     .then(response => {
       const cancionGenerada = response.data.choices[0].text;
-      // Guardar la letra generada
       this.almacenamientoService.guardarLetra(cancionGenerada);
       return cancionGenerada;
     })

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { GuardarletrasPage } from './guardarletras.page';
+import { GuardarLetrasPage } from './guardarletras.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: GuardarletrasPage
+    component: GuardarLetrasPage
   }
 ];
 

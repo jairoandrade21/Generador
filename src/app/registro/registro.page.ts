@@ -68,7 +68,6 @@ export class RegistroPage implements OnInit {
         }
       }
     } else {
-      // Verifica si el campo confirmPassword tiene errores específicos
       if (this.regForm.hasError('passwordMismatch', ['confirmPassword'])) {
         this.alertService.showError("Las contraseñas no coinciden.");
       } else {

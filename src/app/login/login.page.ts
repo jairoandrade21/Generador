@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router'; // Importa el Router
+import { Router } from '@angular/router'; 
 import { AuthenticationService } from '../authentication.service';
 
 @Component({
@@ -29,7 +29,6 @@ export class LoginPage {
   
       await this.authService.login(email, password);
       console.log('Inicio de sesión exitoso');
-      // Otro código después del inicio de sesión exitoso...
     } catch (error) {
       console.error('Error en el componente al intentar iniciar sesión:', error);
     }

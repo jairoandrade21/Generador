@@ -15,11 +15,9 @@ export class HomePage {
 
 
   generarLetraConIA() {
-    // Lógica para generar letra con IA
   }
 
   guardarLetraGenerada() {
-    // Lógica para guardar letra generada
   }
 
   async loadUserInfo() {
@@ -44,10 +42,9 @@ export class HomePage {
   async logout() {
     try {
       await this.authService.signOut();
-      this.router.navigate(['/login']);  // Redirigir a la página de inicio de sesión
+      this.router.navigate(['/login']); 
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
-      // Manejar errores según tus necesidades
     }
   }
 }

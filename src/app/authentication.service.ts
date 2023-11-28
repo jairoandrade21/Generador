@@ -53,7 +53,7 @@ export class AuthenticationService {
     try {
       await this.ngFireAuth.signOut();
       console.log('Cierre de sesión exitoso.');
-      this.clearSessionData(); // Agrega esta línea para limpiar datos de sesión anterior
+      this.clearSessionData(); 
     } catch (error) {
       console.error('Error al cerrar sesión:', error);
       throw error;
@@ -62,12 +62,7 @@ export class AuthenticationService {
   
 
   private clearSessionData() {
-    // Limpiar variables de estado
-    // ...
-  
-    // Limpiar almacenamiento local
     localStorage.removeItem('userData');
-    // ...
   }
 
   async getProfile() {

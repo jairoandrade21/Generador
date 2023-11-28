@@ -11,7 +11,6 @@ export class GuardarLetrasPage {
   constructor(private generadorPage: GeneradorPage) {}
 
   obtenerLetrasGuardadas(): string[] {
-    // Obtener letras guardadas de la página generadora
     return this.generadorPage.obtenerLetrasGuardadas();
   }
 }

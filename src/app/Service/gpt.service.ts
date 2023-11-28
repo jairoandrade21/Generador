@@ -1,28 +1,40 @@
-// src/app/services/gpt.service.ts
-
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import axios from 'axios';
+import {AlmacenamientoLetrasService} from "../Service/guardarletras.service"
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any'
 })
 export class GptService {
-  private apiUrl = 'https://platform.openai.com/api-keys'; // Reemplaza con la URL real de la API de GPT
-  private apiKey = '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'; // Reemplaza con tu clave de API
+  private apiKey = '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';
+  constructor(private almacenamientoService: AlmacenamientoLetrasService) {}
 
-  constructor() {}
-
-  generateText(prompt: string) {
+  generateSong(prompt: string): Promise<string> {
+    const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
+    
     const headers = {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${this.apiKey}`,
+      'Authorization': `Bearer ${this.apiKey}`
     };
-
+  
+   
     const data = {
-      prompt: prompt,
-      // Otros parámetros según la documentación de la API de GPT
+      prompt: `Genera una hermosa canción de amor que incluya los siguientes elementos: ${prompt}.`,
+      max_tokens: 500
     };
-
-    return axios.post(this.apiUrl, data, { headers });
-  }
+    
+  
+    return axios.post(apiUrl, data, { headers })
+    .then(response => {
+      const cancionGenerada = response.data.choices[0].text;
+      // Guardar la letra generada
+      this.almacenamientoService.guardarLetra(cancionGenerada);
+      return cancionGenerada;
+    })
+    .catch(error => {
+      console.error('Error en la solicitud a la API de GPT', error);
+      throw error;
+    });
+}
+  
 }

@@ -1,11 +1,20 @@
-<ion-header [translucent]="true">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Generador de Canciones
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content class="background-content">
-  <div class="overlay-container"></div>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">generador</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let mensaje of mensajes" [class.usuario]="mensaje.startsWith('Usuario')" [class.ia]="mensaje.startsWith('IA')">
+      {{ mensaje }}
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input placeholder="Escribe el tipo de cancion" [(ngModel)]="mensajeUsuario"></ion-input>
+    <ion-button expand="full" (click)="enviarMensaje()">Enviar</ion-button>
+  </ion-item>
 </ion-content>

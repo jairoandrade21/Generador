@@ -1,0 +1,16 @@
+<!-- guardarletras.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Letras Guardadas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let letra of obtenerLetrasGuardadas()">
+      {{ letra }}
+    </ion-item>
+  </ion-list>
+</ion-content>

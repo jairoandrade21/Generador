@@ -11,6 +11,8 @@ import { AlertService } from 'src/alert.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './guards/filtro.guard';  
+import { GptService } from './Service/gpt.service';
+
 
 @NgModule({
   declarations: [AppComponent],

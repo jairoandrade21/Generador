@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { E404Page } from './pages/e404/e404.page';
 import { AuthGuard } from './guards/filtro.guard';
+import { GuardarLetrasPage } from './guardarletras/guardarletras.page';
 
 const routes: Routes = [
   {
@@ -43,8 +44,17 @@ const routes: Routes = [
     canActivate: [AuthGuard] 
   },
   {
+    path: 'guardarletras',
+    loadChildren: () => import('./guardarletras/guardarletras.module').then(m => m.GuardarLetrasPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: '**', 
     component: E404Page
+  },
+  {
+    path: 'guardarletras',
+    loadChildren: () => import('./guardarletras/guardarletras.module').then( m => m.GuardarLetrasPageModule)
   },
 ];
 

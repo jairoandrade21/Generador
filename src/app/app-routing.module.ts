@@ -52,10 +52,6 @@ const routes: Routes = [
     path: '**', 
     component: E404Page
   },
-  {
-    path: 'guardarletras',
-    loadChildren: () => import('./guardarletras/guardarletras.module').then( m => m.GuardarLetrasPageModule)
-  },
 ];
 
 @NgModule({

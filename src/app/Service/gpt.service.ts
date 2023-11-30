@@ -20,6 +20,8 @@ export class GptService {
    
     const data = {
       prompt: `Genera una hermosa canción de amor que incluya los siguientes elementos: ${prompt}.`,
+      prompt2: `Genera una hermosa canción de odio que incluya los siguientes elementos: ${prompt}.`,
+      prompt3: `Genera una hermosa canción de rock que incluya los siguientes elementos: ${prompt}.`,
       max_tokens: 500
     };
     
